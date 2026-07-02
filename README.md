@@ -18,6 +18,18 @@ Epic GamesのOSS版管理システム [Lore](https://github.com/EpicGames/lore) 
 
 実装後、fakeなLore CLIスクリプトを用意してAPI・UI（4モード全て）をブラウザ実機で動作確認済みです。
 
+## スクリーンショット
+
+実`lore`バイナリが手元にない環境向けに、`file history` / `file info` / `file write --address` を模倣する最小限のfake CLIスクリプトを用意し、それに対して動作確認したものです（画像は赤・青の単色サンプル）。実データでの見た目は変わりますが、UIの挙動自体はこの通りです。
+
+| ファイル一覧 | 2-up |
+|---|---|
+| ![ファイル一覧](./docs/screenshots/home.png) | ![2-up](./docs/screenshots/diff-2up.png) |
+
+| Swipe | Onion skin | Pixel diff |
+|---|---|---|
+| ![Swipe](./docs/screenshots/diff-swipe.png) | ![Onion skin](./docs/screenshots/diff-onion.png) | ![Pixel diff](./docs/screenshots/diff-heatmap.png) |
+
 ## セットアップ
 
 ```bash
@@ -85,6 +97,10 @@ src/
 │   └── diff/                  # Diff Engine + キャッシュ + Service層
 └── config/                    # 環境変数の読み出し
 ```
+
+## Zenn記事
+
+[`articles/lore-visual-diff.md`](./articles/lore-visual-diff.md) にポートフォリオ用の記事下書き（Zenn形式のfrontmatter付き、`published: false`）があります。
 
 ## 参考リンク
 
